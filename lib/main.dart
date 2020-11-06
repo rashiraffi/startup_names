@@ -47,6 +47,20 @@ class _MainPageState extends State<MainPage> {
           ),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            wordPair = WordPair.random().asPascalCase;
+          });
+        },
+        backgroundColor: Colors.white,
+        child: Center(
+          child: Text(
+            'NEXT',
+            style: TextStyle(color: Colors.black, fontSize: 20),
+          ),
+        ),
+      ),
     );
   }
 }
