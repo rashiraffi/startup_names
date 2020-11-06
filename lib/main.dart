@@ -34,6 +34,7 @@ class _MainPageState extends State<MainPage> {
         ),
         backgroundColor: Colors.black,
       ),
+      backgroundColor: Colors.black12,
     );
   }
 }
