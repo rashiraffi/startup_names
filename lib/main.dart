@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:english_words/english_words.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,6 +24,7 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
+    String wordPair = WordPair.random().asPascalCase;
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -35,6 +37,16 @@ class _MainPageState extends State<MainPage> {
         backgroundColor: Colors.black,
       ),
       backgroundColor: Colors.black12,
+      body: Center(
+        child: Text(
+          wordPair,
+          style: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+      ),
     );
   }
 }
